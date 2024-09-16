@@ -6,17 +6,17 @@ public class CoreCalculator {
     private double height;
     private double depth;
 
-    // Constructor to accept width, height, and depth
+   
     public CoreCalculator(double width, double height, double depth) {
         this.width = width;
         this.height = height;
         this.depth = depth;
     }
 
-    // Calculate core factors (example calculation)
+   
     public double calculateCoreFactors() {
-        // Example calculation for core factors
-        return 1.5; // Placeholder value
+       
+        return 1.5; 
     }
 
     // Calculate effective volume (Ve)
