@@ -22,23 +22,23 @@ public class CoreModelServlet extends HttpServlet {
             // Get the core model input (e.g., EE25/13/7)
             String coreModel = request.getParameter("coreModel");
 
-            // Extract width, height, and depth from the core model
-            String[] dimensions = coreModel.substring(2).split("/"); // Skip 'EE' part and split the remaining
+        
+            String[] dimensions = coreModel.substring(2).split("/"); 
             double width = Double.parseDouble(dimensions[0]);
             double height = Double.parseDouble(dimensions[1]);
             double depth = Double.parseDouble(dimensions[2]);
 
-            // Create a calculator object using the parsed dimensions
+            
             CoreCalculator calculator = new CoreCalculator(width, height, depth);
 
-            // Perform the calculations
+           
             double coreFactors = calculator.calculateCoreFactors();
             double effectiveVolume = calculator.calculateEffectiveVolume();
             double effectiveLength = calculator.calculateEffectiveLength();
             double effectiveArea = calculator.calculateEffectiveArea();
             double minimumArea = calculator.calculateMinimumArea();
 
-            // Generate dynamic HTML response with calculation results
+            
             out.println("<html>");
             out.println("<head><title>Calculation Results</title></head>");
             out.println("<body>");
